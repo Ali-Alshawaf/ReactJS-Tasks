@@ -18,11 +18,7 @@ function App() {
       <Route path='/Signup' element = {<Signup/>}/>
       <Route path='/*' element = {<Error/>}/>
 
-
-
-
     </Routes>
-
     </BrowserRouter>
     
   );
