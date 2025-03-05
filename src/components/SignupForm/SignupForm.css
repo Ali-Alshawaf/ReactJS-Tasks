@@ -8,8 +8,11 @@
     padding: 0;
     background: #fff;
     padding: 25px;
-    width: 350px;
-    border-radius: 12px;
+    width: 500px;
+    height: 100vh;
+    float: right;
+    text-align: right;
+    align-content: center;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
   }
   
@@ -36,6 +39,7 @@
     border-radius: 6px;
     font-size: 14px;
     outline: none;
+    text-align: right;
     transition: 0.3s;
   }
   
@@ -51,6 +55,10 @@
     display: none;
   }
   
+  .Line{
+    margin-top: 40px ;
+  }
+
   .submit {
     background: #4aa356;
     color: white;

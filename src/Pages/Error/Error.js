@@ -1,5 +1,9 @@
+import './Error.css'
+
 export default function Error(){
     return(
-        <h1>Error 404</h1>
+        <div className="Container">
+                    <h1 className="Error">** Error 404 **</h1>
+            </div>
     )
 }

@@ -72,12 +72,13 @@ export default function SignupForm() {
                 <input className="submit" type="submit" value="تسجيل" />
             </form>
 
-            <hr />
+            <hr className="Line" />
 
             <div className="flex-container">
+                <LanguageBtn />
+
                 <a href="Login" className="link">تسجيل الدخول</a>
 
-                <LanguageBtn />
             </div>
         </div>
     );

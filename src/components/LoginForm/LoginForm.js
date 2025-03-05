@@ -34,12 +34,13 @@ export default function LoginForm() {
                 <p id="error" className="error">البريد الالكتروني أو كلمة المرور غير صحيحة</p>
                 <input className="submit" type="submit" value="تسجيل الدخول" />
             </form>
-            <hr />
+            <hr className="Line" />
             <div className="flex-container">
+            <LanguageBtn />
+
                 <div className="Links">
                     <a href="Signup" className="link">تسجيل حساب</a>
                 </div>
-                <LanguageBtn />
             </div>
         </div>
     );
