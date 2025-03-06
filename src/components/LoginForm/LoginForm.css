@@ -91,7 +91,6 @@
     align-items: center;
   }
   
-  /* Remember Me Styling */
   .remember-me {
     display: flex;
     align-items: center;
@@ -99,11 +98,11 @@
     margin-bottom: 15px;
     font-size: 14px;
     color: #444;
+    justify-content: end;
   }
   
   .remember-me input {
     width: auto;
     cursor: pointer;
   }
-  
   
