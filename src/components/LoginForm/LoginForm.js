@@ -44,7 +44,7 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="container">
+        <div className="LoginContainer">
             <h1>تسجيل الدخول</h1>
             <form id="loginForm" onSubmit={handleSubmit}>
                 <label htmlFor="Email">البريد الإلكتروني</label>

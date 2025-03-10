@@ -51,7 +51,7 @@ export default function SignupForm() {
     };
 
     return (
-        <div className="container">
+        <div className="SignupContainer">
             <h1>تسجيل</h1>
             <form id="signupForm" onSubmit={handleSubmit}>
                 <label htmlFor="Name">اسم المستخدم</label>

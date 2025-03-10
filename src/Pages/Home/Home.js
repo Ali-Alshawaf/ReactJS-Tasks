@@ -1,21 +1,12 @@
-import Header from "../../components/Header/Header";
 import './Home.css'
 
-
 export default function Home(){
+
 return(
-<>
+<div className='HomeContainer'>
 
-<Header/>
-<h1>welcom</h1>
+<h1>مرحبا بك</h1>
 
-
-</>
-
-
-
-
-
+</div>
 );
-
 }
