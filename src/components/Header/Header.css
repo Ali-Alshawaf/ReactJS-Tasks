@@ -22,14 +22,14 @@
 
 }
 
-
 #Logout{
-    color: red;
+    color: rgb(231, 76, 76);
     cursor: pointer;
 }
 
-
-
+#itemList{
+    color: rgb(64, 64, 64);
+}
 
 .drawer{
     padding-right: 10px ;
