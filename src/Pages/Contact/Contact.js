@@ -12,7 +12,7 @@ export default function Contact(){
         </div>
         <div className="ContactContainer">
                         
-            <h2> الرقم: 0555347270</h2>
+            <h2> الرقم: 0555555555</h2>
             <h2> alshawafali@outlook.com :البريد الإلكتروني</h2>
             
         </div>

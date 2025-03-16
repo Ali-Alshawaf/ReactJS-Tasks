@@ -1,14 +1,39 @@
-import './LanguageBtn.css';
+import React, { useState } from "react";
+import "./LanguageBtn.css";
 
+export default function LanguageBtn({ setLanguage }) {
+  const [isEnglish, setIsEnglish] = useState(false);
+  const [language, setLang] = useState("ar");
 
-export default function LanguageBtn(){
+  const toggleLanguage = () => {
+    const newLanguage = isEnglish ? "ar" : "en";
+    setLang(newLanguage);
+    setLanguage(newLanguage); 
+    setIsEnglish(!isEnglish);
+  };
 
-    return(
-        <div className="btn-container">
-            <label className="switch btn-color-mode-switch">
-                <input  value="1" id="color_mode" name="color_mode" type="checkbox" />
-                <label className="btn-color-mode-switch-inner" data-off="عربي" data-on="إنجليزي" htmlFor="color_mode"></label>
-            </label>
-        </div>
-    );
+  const menuItems = {
+    ar: {
+      arb: "عربي",
+      eng: "انجليزي"
+    },
+    en: {
+      arb: "Arb",
+      eng: "Eng"
+    },
+  };
+
+  return (
+    <div className="btn-container">
+      <label className="switch btn-color-mode-switch">
+        <input type="checkbox" id="color_mode" onChange={toggleLanguage} />
+        <label 
+          className="btn-color-mode-switch-inner" 
+          data-off={menuItems[language].arb} 
+          data-on={menuItems[language].eng} 
+          htmlFor="color_mode"
+        ></label>
+      </label>
+    </div>
+  );
 }
