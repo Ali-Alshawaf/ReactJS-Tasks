@@ -12,16 +12,7 @@ export default function LanguageBtn({ setLanguage }) {
     setIsEnglish(!isEnglish);
   };
 
-  const menuItems = {
-    ar: {
-      arb: "عربي",
-      eng: "انجليزي"
-    },
-    en: {
-      arb: "Arb",
-      eng: "Eng"
-    },
-  };
+ 
 
   return (
     <div className="btn-container">
@@ -29,8 +20,8 @@ export default function LanguageBtn({ setLanguage }) {
         <input type="checkbox" id="color_mode" onChange={toggleLanguage} />
         <label 
           className="btn-color-mode-switch-inner" 
-          data-off={menuItems[language].arb} 
-          data-on={menuItems[language].eng} 
+          data-off="عربي" 
+          data-on="ENG"
           htmlFor="color_mode"
         ></label>
       </label>
