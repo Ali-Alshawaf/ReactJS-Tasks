@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import LanguageBtn from '../LanguageBtn/LanguageBtn';
 import './LoginForm.css';
 
@@ -42,29 +43,51 @@ export default function LoginForm() {
             rememberMe.checked = true;
         }
     };
+    const [language, setLanguage] = useState("ar");
+    const content = {
+        ar:{
+            Title:"تسجيل الدخول",
+            Email:"البريد الإلكتروني",
+            Password:"كلمة المرور",
+            Error:"البريد الالكتروني أو كلمة المرور غير صحيحة",
+            rem:"تذكرني",
+            login:"تسجيل الدخول",
+            signup:"تسجيل حساب"
+        },
+        en:{
+            Title:"Log in",
+            Email:"Email",
+            Password:"Password",
+            Error:"Email or password is incorrect",
+            rem:"Remember me",
+            login:"Log in",
+            signup:"Sign Up"
+        }
+
+    }
 
     return (
         <div className="LoginContainer">
-            <h1>تسجيل الدخول</h1>
+            <h1>{content[language].Title}</h1>
             <form id="loginForm" onSubmit={handleSubmit}>
-                <label htmlFor="Email">البريد الإلكتروني</label>
+                <label htmlFor="Email">{content[language].Email}</label>
                 <input id="Email" type="email" placeholder="ali@example.com" required />
-                <label htmlFor="Password">كلمة المرور</label>
+                <label htmlFor="Password">{content[language].Password}</label>
                 <input id="Password" type="password" placeholder="********" required />
-                <p id="error" className="error">البريد الالكتروني أو كلمة المرور غير صحيحة</p>
+                <p id="error" className="error">{content[language].Error}</p>
 
                 <div className="remember-me">
-                    <label htmlFor="rememberMe">تذكرني</label>
+                    <label htmlFor="rememberMe">{content[language].rem}</label>
                     <input type="checkbox" id="rememberMe" />
                 </div>
 
-                <input className="submit" type="submit" value="تسجيل الدخول" />
+                <input className="submit" type="submit" value={content[language].login} />
             </form>
             <hr className="Line" />
             <div className="flex-container">
-                <LanguageBtn />
+                <LanguageBtn setLanguage={setLanguage} />
                 <div className="Links">
-                    <a href="Signup" className="link">تسجيل حساب</a>
+                    <a href="Signup" className="link">{content[language].signup}</a>
                 </div>
             </div>
         </div>

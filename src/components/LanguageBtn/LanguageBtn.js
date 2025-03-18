@@ -3,11 +3,9 @@ import "./LanguageBtn.css";
 
 export default function LanguageBtn({ setLanguage }) {
   const [isEnglish, setIsEnglish] = useState(false);
-  const [language, setLang] = useState("ar");
 
   const toggleLanguage = () => {
     const newLanguage = isEnglish ? "ar" : "en";
-    setLang(newLanguage);
     setLanguage(newLanguage); 
     setIsEnglish(!isEnglish);
   };

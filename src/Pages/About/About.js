@@ -1,18 +1,28 @@
-import './About.css'
+import "./About.css";
 
-export default function About(){
+export default function About({ language }) {
+  const content = {
+    ar: {
+      title: "عنا",
+      name: "الاسم: علي عبدالجليل الشواف",
+      specialty: "التخصص: علوم الحاسب",
+    },
+    en: {
+      title: "About Us",
+      name: "Name: Ali Abduljalil Alshawaf",
+      specialty: "Specialty: Computer Science",
+    },
+  };
 
-    return(
-        <>
-        <div className="AboutContainer">
-        <h1>عنا</h1>
-        </div>
-
-        <div className="AboutContainer">
-        <h2>الاسم: علي عبدالجليل الشواف</h2>
-        <h2>التخصص: علوم الحاسب</h2>
-        </div>
-        </>
-        
-    )
+  return (
+    <>
+      <div className="AboutContainer">
+        <h1>{content[language].title}</h1>
+      </div>
+      <div className="AboutContainer">
+        <h2>{content[language].name}</h2>
+        <h2>{content[language].specialty}</h2>
+      </div>
+    </>
+  );
 }

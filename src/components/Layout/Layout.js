@@ -1,9 +1,9 @@
 import Header from "../../components/Header/Header";
 
-export default function Layout({ children }) {
+export default function Layout({ children, language, setLanguage }) {
   return (
     <>
-      <Header/>
+      <Header language={language} setLanguage={setLanguage} />
       {children}
     </>
   );

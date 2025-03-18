@@ -1,6 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
 import LanguageBtn from '../LanguageBtn/LanguageBtn';
-
 import './SignupForm.css';
 
 export default function SignupForm() {
@@ -50,34 +49,71 @@ export default function SignupForm() {
         }
     };
 
+    const [language, setLanguage] = useState("ar");
+    const content = {
+        ar:{
+            Title:"تسجيل",
+            UserN:"اسم المستخدم",
+            Email:"البريد الإلكتروني",
+            Password:"كلمة المرور",
+            Error:"البريد الالكتروني أو كلمة المرور غير صحيحة",
+            rem:"تذكرني",
+            login:"تسجيل الدخول",
+            signup:"تسجيل حساب",
+            Name:"علي",
+            Number:"رقم الجوال",
+            NumberError:"رقم الجوال غير صحيح",
+            EmailError:"البريد الإلكتروني مستخدم بالفعل",
+            NameError:"الاسم مستخدم بالفعل"
+
+        },
+        en:{
+            Title:"Sign Up",
+            UserN:"User Name",
+            Email:"Email",
+            Password:"Password",
+            Error:"Email or password is incorrect",
+            rem:"Remember me",
+            login:"Log in",
+            signup:"Sign Up",
+            Name: "Ali",
+            Number: "Phone number",
+            NumberError: "Invalid mobile number",
+            EmailError: "Email address already in use",
+            NameError: "Name already in use"
+
+        }
+
+    }
+
     return (
         <div className="SignupContainer">
-            <h1>تسجيل</h1>
+            <h1>{content[language].signup}</h1>
             <form id="signupForm" onSubmit={handleSubmit}>
-                <label htmlFor="Name">اسم المستخدم</label>
-                <input id="Name" type="text" placeholder="علي" required />
-                <p className="error" id="ErrorName">الاسم مستخدم بالفعل</p>
+                <label htmlFor="Name">{content[language].UserN}</label>
+                <input id="Name" type="text" placeholder={content[language].Name} required />
+                <p className="error" id="ErrorName">{content[language].NameError}</p>
 
-                <label htmlFor="Email">البريد الإلكتروني</label>
+                <label htmlFor="Email">{content[language].Email}</label>
                 <input id="Email" type="email" placeholder="ali@example.com" required />
-                <p className="error" id="ErrorEmail">البريد الإلكتروني مستخدم بالفعل</p>
+                <p className="error" id="ErrorEmail">{content[language].EmailError}</p>
 
-                <label htmlFor="Number">رقم الجوال</label>
+                <label htmlFor="Number">{content[language].Number}</label>
                 <input id="Number" type="text" placeholder="05 **** ****" required />
-                <p className="error" id="ErrorNumber">رقم الجوال غير صحيح</p>
+                <p className="error" id="ErrorNumber">{content[language].NumberError}</p>
 
-                <label htmlFor="Password">كلمة المرور</label>
+                <label htmlFor="Password">{content[language].Password}</label>
                 <input id="Password" type="password" placeholder="********" required />
 
-                <input className="submit" type="submit" value="تسجيل" />
+                <input className="submit" type="submit" value={content[language].signup} />
             </form>
 
             <hr className="Line" />
 
             <div className="flex-container">
-                <LanguageBtn />
+                <LanguageBtn setLanguage={setLanguage} />
 
-                <a href="Login" className="link">تسجيل الدخول</a>
+                <a href="Login" className="link">{content[language].login}</a>
 
             </div>
         </div>

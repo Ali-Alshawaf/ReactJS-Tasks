@@ -7,9 +7,8 @@ import "./Header.css";
 import LanguageBtn from "../LanguageBtn/LanguageBtn";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
 
-export default function Header() {
+export default function Header({ language, setLanguage }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [language, setLanguage] = useState("ar"); 
 
   const Logout = () => {
     localStorage.removeItem("users");
