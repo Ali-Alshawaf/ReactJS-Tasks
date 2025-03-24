@@ -1,10 +1,22 @@
 import React from "react";
 import "./Home.css";
+import { useEffect } from 'react';
+
+
 
 export default function Home({ language }) {
+
+  useEffect(()=>{
+    document.title = `${content[language].title}`;
+});
+
   const content = {
-    ar: { welcome: "مرحبًا بكم في الصفحة الرئيسية" },
-    en: { welcome: "Welcome to the Home Page" },
+    ar: { 
+      tilte:"الرئيسية",
+      welcome: "مرحبًا بكم في الصفحة الرئيسية" },
+    en: { 
+      tilte:"Main",
+      welcome: "Welcome to the Home Page" },
   };
 
   return (

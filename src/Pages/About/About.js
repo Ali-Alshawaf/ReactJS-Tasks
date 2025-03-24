@@ -1,6 +1,12 @@
 import "./About.css";
+import { useEffect } from 'react';
+
 
 export default function About({ language }) {
+  useEffect(()=>{
+    document.title = `${content[language].title}`;
+});
+
   const content = {
     ar: {
       title: "عنا",

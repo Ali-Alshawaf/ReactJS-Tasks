@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LanguageBtn from '../LanguageBtn/LanguageBtn';
 import './LoginForm.css';
 
 export default function LoginForm() {
+
+    useEffect(()=>{
+        document.title = `${content[language].Title}`;
+    });
 
     const handleSubmit = (event) => {
         event.preventDefault();

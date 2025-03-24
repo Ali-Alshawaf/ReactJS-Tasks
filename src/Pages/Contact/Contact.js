@@ -1,7 +1,14 @@
 import './Contact.css'
+import { useEffect } from 'react';
+
 
 export default function Contact({language}){
-const menuItems = {
+
+useEffect(()=>{
+    document.title = `${content[language].title}`;
+});
+
+const content = {
     ar:{
     Title:"تواصل",
     Number:"الرقم: 0545694313",
@@ -18,13 +25,13 @@ const menuItems = {
         <>
         <div className="ContactContainer">
             
-            <h1>{menuItems[language].Title}</h1>
+            <h1>{content[language].Title}</h1>
             
         </div>
         <div className="ContactContainer">
                         
-            <h2>{menuItems[language].Number}</h2>
-            <h2>{menuItems[language].Email}</h2>
+            <h2>{content[language].Number}</h2>
+            <h2>{content[language].Email}</h2>
             
         </div>
         </>
