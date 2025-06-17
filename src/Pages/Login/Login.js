@@ -1,12 +1,9 @@
-import { useEffect } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import './Login.css'
 
-export default function Login(content,language){
+export default function Login(){
 
-useEffect(()=>{
-    document.title = `${content[language].Title}`;
-});
+
 
 return(
 <>

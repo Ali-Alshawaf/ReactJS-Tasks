@@ -7,6 +7,7 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Layout from './components/Layout/Layout';
 
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -21,6 +22,7 @@ function App() {
 
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
+
 
         <Route path="/Contact" element={<Layout language={language} setLanguage={setLanguage}><Contact language={language} /></Layout>}/>
         <Route path="/About" element={<Layout language={language} setLanguage={setLanguage}><About language={language} /></Layout>}/>
