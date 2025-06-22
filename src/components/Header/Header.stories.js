@@ -11,12 +11,7 @@ const Template = (args) => {
   return <Header language={language} setLanguage={setLanguage} />;
 };
 
-export const English = Template.bind({});
-English.args = {
-  language: 'en',
-};
+export const Navbar = () => <Template />;
 
-export const Arabic = Template.bind({});
-Arabic.args = {
-  language: 'ar',
-};
+
+
