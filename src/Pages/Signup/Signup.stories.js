@@ -5,5 +5,4 @@ export default {
   component: Signup,
 };
 
-export const English = () => <Signup language="en" />;
-export const Arabic = () => <Signup language="ar" />;
+export const SignupPage = () => <Signup />;
